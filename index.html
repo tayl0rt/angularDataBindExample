@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Data Binds Example 1</title>
+  
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-app="dataBindTestApp">
+
+  <div>
+
+    <div id="container" ng-controller="dataBindTestCtrl">
+
+	    <h1>{{title}}</h1>
+
+      <h2 id="text-to-show" ng-show="userInputCheck()">You are able to see me! Everything checks out!</h2>
+      <input id="checkbox" type="checkbox" ng-model="checked"/>
+      <input id="user-input" type="text" ng-model="userInput"/>
+	    </br></br>
+      <button id="console-log-button" ng-click="consoleButton()">console.log for $scope.userInput</button>
+
+      <div id="description">
+        
+        <p>
+        <h3>This demonstrates a little data binding in angular. The goal here is to make the hidden text show only when you check the checkbox, and also type in specifically checked or Checked in the text box!</h3>
+        </br></br>
+
+
+        The hidden h2 element has on it 
+
+        <br/><br/><code>ng-show="userInputCheck()</code><br/><br/><br/><br/> 
+
+        Which is a function that checks $scope.userInput to make sure the user has typed checked or Checked, AND that the checkbox is checked, and if so, returns true. userInput is bound to the text field (<<code>input</code>>) you can type in and has on it
+
+        <br/><br/><code>ng-model="userInput"</code><br/><br/><br/><br/>
+
+        The checkbox has <br/><br/><code>ng-model="checked"</code><br/><br> on it which is set to false by default. </br></br></br></br>
+
+        The console.log button just logs the value of userInput to the console for you to look at as you type and change it, etc etc.
+
+
+
+
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>

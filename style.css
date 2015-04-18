@@ -1,0 +1,12 @@
+#container {
+  position: center;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#description {
+  margin-top: 25px;
+}
+
