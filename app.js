@@ -4,14 +4,14 @@
 // Apr 17 2015
 //
 //
-
+//
 // Let's begin!
 
 //app construction
 var app = angular.module('dataBindTestApp', []);
 
 //controller construction
-app.controller('dataBindTestCtrl', ['$scope', function($scope){
+app.controller('dataBindTestCtrl', ['$scope', function($scope) {
 
 	$scope.title = 'Data Binds Example'; //sets title
 
